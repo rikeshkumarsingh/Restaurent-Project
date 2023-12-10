@@ -1,0 +1,44 @@
+<div class="body">
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form (ngSubmit)="submitForm()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" [(ngModel)]="register.name" name="name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter your username" [(ngModel)]="register.userName" name="userName" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email" [(ngModel)]="register.emailId" name="emailId" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="Enter your number" [(ngModel)]="register.mobileNo" name="mobileNo" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter your password" [(ngModel)]="register.password" name="password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm your password" [(ngModel)]="register.confPassword" name="confPassword" required>
+                    </div>
+                    <div class="input-box box2">
+                        <span class="details">Address</span>
+                        <input type="text" placeholder="Enter your Address" [(ngModel)]="register.address" name="address" required>
+                    </div>
+                   
+                </div>
+                
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

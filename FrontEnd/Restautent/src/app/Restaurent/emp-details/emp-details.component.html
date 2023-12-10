@@ -1,0 +1,46 @@
+<div class="body">
+    <div class="container">
+        <div class="title"> Add Employee Details</div>
+        <div class="content">
+            <form (ngSubmit)="submit()">
+                <div class="user-details">
+                    
+                    <div class="input-box">
+                        <span class="details"> Employee Id</span>
+                        <input type="text" placeholder="Enter DEmployee Id" [(ngModel)]="empDetails.empId" name="empId" >
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Employee Name </span>
+                        <input type="text" placeholder="Enter Employee Name" [(ngModel)]="empDetails.empName"  name="empName">
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> Position</span>
+                        <input type="text" placeholder="Enter Position" [(ngModel)]="empDetails.position" name="position" >
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mobile</span>
+                        <input type="text" placeholder="Enter Mobile" [(ngModel)]="empDetails.mobile" name="mobile">
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> Email Id</span>
+                        <input type="text" placeholder="Enter Email Id " [(ngModel)]="empDetails.emailId" name="emailId" >
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Salary</span>
+                        <input type="number" placeholder="Enter Salary " [(ngModel)]="empDetails.salary"  name="salary">
+                    </div>
+                    <div class="input-box">
+                        <span class="details"> Adddress</span>
+                        <input type="text" placeholder="Enter Adddress " [(ngModel)]="empDetails.adddress" name="adddress" >
+                    </div>
+                   
+                   
+                </div>
+                
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

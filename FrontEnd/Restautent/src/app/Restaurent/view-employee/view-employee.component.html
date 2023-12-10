@@ -1,0 +1,102 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.empId}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.empName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Position </th>
+      <td mat-cell *matCellDef="let row"> {{row.position}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mobile">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
+      <td mat-cell *matCellDef="let row"> {{row.mobile}} </td>
+    </ng-container>
+    <ng-container matColumnDef="emailId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email Id </th>
+      <td mat-cell *matCellDef="let row"> {{row.emailId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="adddress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Adddress </th>
+      <td mat-cell *matCellDef="let row"> {{row.adddress}} </td>
+    </ng-container>
+    <ng-container matColumnDef="salary">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>
+      <td mat-cell *matCellDef="let row"> {{row.salary}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+      <td mat-cell *matCellDef="let row"> <button class="buttonss" (click)="getOldData(row.id)"> <mat-icon>update</mat-icon></button>
+        &nbsp;&nbsp;&nbsp;&nbsp; <button class="buttonss" (click)="deletes(row.id)"> <mat-icon>delete</mat-icon></button></td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+
+<div class="update modal" *ngIf="updatedata">
+  <div class="container">
+    <div class="title"> Add Employee Details</div>
+    <div class="content">
+      <form (ngSubmit)="update()">
+        <div class="user-details">
+
+          <div class="input-box">
+            <span class="details"> Employee Id</span>
+            <input type="text" placeholder="Enter DEmployee Id" [(ngModel)]="empDetails.empId" name="empId">
+          </div>
+          <div class="input-box">
+            <span class="details">Employee Name </span>
+            <input type="text" placeholder="Enter Employee Name" [(ngModel)]="empDetails.empName" name="empName">
+          </div>
+          <div class="input-box">
+            <span class="details"> Position</span>
+            <input type="text" placeholder="Enter Position" [(ngModel)]="empDetails.position" name="position">
+          </div>
+          <div class="input-box">
+            <span class="details">Mobile</span>
+            <input type="text" placeholder="Enter Mobile" [(ngModel)]="empDetails.mobile" name="mobile">
+          </div>
+          <div class="input-box">
+            <span class="details"> Email Id</span>
+            <input type="text" placeholder="Enter Email Id " [(ngModel)]="empDetails.emailId" name="emailId">
+          </div>
+          <div class="input-box">
+            <span class="details">Salary</span>
+            <input type="number" placeholder="Enter Salary " [(ngModel)]="empDetails.salary" name="salary">
+          </div>
+          <div class="input-box">
+            <span class="details"> Adddress</span>
+            <input type="text" placeholder="Enter Adddress " [(ngModel)]="empDetails.adddress" name="adddress">
+          </div>
+
+
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Update">
+          
+        </div>
+       
+
+      </form>
+    </div>
+  </div>
+</div>

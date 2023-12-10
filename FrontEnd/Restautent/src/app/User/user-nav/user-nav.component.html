@@ -1,0 +1,18 @@
+<div class="bootstrap body">
+    <div class="container-fluid">
+       <div class="row">
+        <nav>           
+            <label class="logo">Restaurant</label>
+            <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li><a *ngIf="!logactive" routerLink="/crueentorder">current order</a></li>
+                <li><a *ngIf="!logactive" routerLink="/history">History</a></li>
+                <li *ngIf="logactive"><a routerLink="/login">Login</a></li>
+                <li *ngIf="logactive"><a routerLink="/signup">SignUp</a></li>
+                <li *ngIf="!logactive" (click)="logout()"><a >Logout</a></li>
+            </ul>
+        </nav>
+       </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

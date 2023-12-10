@@ -1,0 +1,17 @@
+<div class="bootstrap body">
+    <div class="container-fluid">
+       <div class="row">
+        <nav>           
+            <label class="logo">Restaurant</label>
+            <ul>
+                <li><a routerLink="/admin">Home</a></li>
+                <li><a >About</a></li>
+                <li><a >Services</a></li>
+                <li><a routerLink="/admin/restosignup">add Restaurant</a></li>
+                <li (click)="logout()"><a >Logout</a></li>
+            </ul>
+        </nav>
+       </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

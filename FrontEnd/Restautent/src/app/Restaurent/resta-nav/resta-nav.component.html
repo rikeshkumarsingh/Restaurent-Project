@@ -1,0 +1,19 @@
+<div class="bootstrap body">
+    <div class="container-fluid">
+       <div class="row">
+        <nav>           
+            <label class="logo" *ngIf="restoname">{{ restoname.name | uppercase }}</label>
+            <ul>
+                <li><a routerLink="/resta">Home</a></li>     
+                <li><a routerLink="/resta/dish">add dishes</a></li>  
+                <li><a routerLink="/resta/empdtl">Add Employee</a></li>     
+                <li><a routerLink="/resta/viewemp">View Employee</a></li>               
+                <li><a routerLink="/resta/order">view order</a></li>               
+                <li><a routerLink="/resta/history">Order History</a></li>
+                <li (click)="logout()"><a >Logout</a></li>
+            </ul>
+        </nav>
+       </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

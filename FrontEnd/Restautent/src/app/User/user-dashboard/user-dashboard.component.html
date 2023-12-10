@@ -1,0 +1,53 @@
+<div class="bootstrap body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="box-container">
+                    <div *ngFor="let rest of resto" class="box" (click)="getAllfood(rest)">
+                        <span class="dname">{{ rest }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="food" *ngIf="food">
+            <div class="row ">
+                <div class="col">
+                    <!-- <h1>{{food.restaurentName}}</h1> -->
+                 
+
+                    <div class="box-container">
+                        <div *ngFor="let food of food" class="box" >                          
+                            <span class="dname">{{ food.dishName }}</span>
+                            <span>Price ₹ {{ food.price }}</span>
+                            <mat-checkbox (click)="foodselection(food.dishName,food.price)" [formControl]="disableSelect"> </mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <div class="row">
+                    <div class="col">
+                        <button (click)="order()" mat-raised-button color="primary">Order</button>
+                    </div>
+                    <div class="col">
+                        <button (click)="close()" mat-raised-button color="primary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logs" *ngIf="checklogin">
+            <div class="row ">
+                <div class="col">
+                    <!-- <h1>{{food.restaurentName}}</h1> -->
+                    <div class="box-container">
+                        <h1>Login Required</h1><br>
+                        <!-- <span>Login first</span>
+                        <a routerLink="/login">Login</a> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

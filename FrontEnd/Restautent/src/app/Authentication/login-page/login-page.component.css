@@ -1,0 +1,99 @@
+/* Base styles for larger screens */
+.body {
+    height: 90vh;
+    background-image: url('/assets/img/background/loginBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.loginBox {
+    display: grid;
+    justify-items: center;
+    width: 25vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.logBox {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    height: 63vh;
+
+}
+
+.headlog {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 1.5vw;
+}
+
+button {
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+}
+.mat-mdc-card {
+    background-color: rgba(33, 122, 114, 0.547) !important;
+    margin-left: 58vw;
+    margin-bottom: 12vh;
+}
+
+.logo{
+    height: 25vh;
+    width: 30vw;
+  
+}
+
+.loginBox2{
+    display: grid;
+    justify-items: center;
+}
+input{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border: solid rgb(75, 19, 128) 2px;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+}
+a{
+    /* text-decoration:  dashed; */
+    font-size: 20px;
+    color: rgb(67, 6, 114);
+    margin-bottom: 20px;
+}
+/* Media Query for smaller screens (phones) */
+@media (max-width: 768px) {
+    .body {
+        height: auto; /* Remove fixed height for smaller screens */
+    }
+
+    .loginBox {
+        width: 90vw; 
+    }
+
+    .logBox {
+        height: 65vh; /* Remove fixed height for smaller screens */
+        margin-bottom: 6vh;
+    }
+
+    .headlog {
+        font-size: 20px; /* Reduce font size for smaller screens */
+        padding: 1vw; /* Adjust padding for smaller screens */
+    }
+    .mat-mdc-card {
+        background-color: rgba(33, 122, 114, 0.547) !important;
+        margin-left:0;
+        margin-bottom: 0;
+    }
+
+    button {
+        margin-top: 1vw; /* Adjust margin for smaller screens */
+        margin-bottom: 1vw; /* Adjust margin for smaller screens */
+    }
+}
